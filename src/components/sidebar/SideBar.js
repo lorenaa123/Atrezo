@@ -18,14 +18,19 @@ const SideBar = ({ isOpen, toggle }) => (
     <div className="side-menu">
       <Nav vertical className="list-unstyled pb-3">
         <p>Dummy Heading</p>
-        <SubMenu title="Home" icon={faHome} items={submenus[0]} />
+        <NavItem>
+          <NavLink tag={Link} to={"/"}>
+            <FontAwesomeIcon icon={faHome} className="mr-2" />
+            Home
+          </NavLink>
+        </NavItem>
         <NavItem>
           <NavLink tag={Link} to={"/about"}>
             <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
             About
           </NavLink>
         </NavItem>
-        <SubMenu title="Pages" icon={faCopy} items={submenus[1]} />
+        <SubMenu title="Pages" icon={faCopy} items={submenus[0]} />
         <NavItem>
           <NavLink tag={Link} to={"/pages"}>
             <FontAwesomeIcon icon={faImage} className="mr-2" />
@@ -50,20 +55,6 @@ const SideBar = ({ isOpen, toggle }) => (
 );
 
 const submenus = [
-  [
-    {
-      title: "Home 1",
-      target: "Home-1",
-    },
-    {
-      title: "Home 2",
-      target: "Home-2",
-    },
-    {
-      itle: "Home 3",
-      target: "Home-3",
-    },
-  ],
   [
     {
       title: "Page 1",

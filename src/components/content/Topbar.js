@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {
   Navbar,
   Button,
@@ -23,8 +23,8 @@ const Topbar = ({ toggleSidebar }) => {
       className="navbar shadow-sm p-3 mb-5 bg-white rounded"
       expand="md"
     >
-      <Button color="info" onClick={toggleSidebar}>
-        <FontAwesomeIcon icon={faAlignLeft} />
+      <Button color="link" size={"lg"} onClick={toggleSidebar}>
+        <FontAwesomeIcon icon={faBars} />
       </Button>
       <NavbarToggler onClick={toggleTopbar} />
       <Collapse isOpen={topbarIsOpen} navbar>
