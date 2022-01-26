@@ -1,22 +1,19 @@
 import './App.css';
+import {BrowserRouter as Router} from "react-router-dom";
+import SideBar from "./components/sidebar/SideBar";
+import {useState} from "react";
+import Content from "./components/content/Content";
 
 function App() {
+  const [sidebarIsOpen, setSidebarOpen] = useState(true);
+  const toggleSidebar = () => setSidebarOpen(!sidebarIsOpen);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App wrapper">
+        <SideBar toggle={toggleSidebar} isOpen={sidebarIsOpen}/>
+        <Content toggleSidebar={toggleSidebar} sidebarIsOpen={sidebarIsOpen}/>
+      </div>
+    </Router>
   );
 }
 
