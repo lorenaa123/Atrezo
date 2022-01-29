@@ -5,6 +5,7 @@ import {Route, Routes} from "react-router-dom";
 
 import Topbar from "./Topbar";
 import {Dashboard} from "../../views/Dashboard";
+import {Users} from "../../views/users/Users";
 
 const Content = ({sidebarIsOpen, toggleSidebar}) => (
   <div className={classNames("content", {"is-open": sidebarIsOpen})}
@@ -13,7 +14,7 @@ const Content = ({sidebarIsOpen, toggleSidebar}) => (
     <div className="px-3">
       <Routes>
         <Route exact path="/" element={<Dashboard/>}/>
-        <Route exact path="/about" element={() => "About"}/>
+        <Route exact path="/users" element={<Users/>}/>
         <Route exact path="/Pages" element={() => "Pages"}/>
         <Route exact path="/faq" element={() => "FAQ"}/>
         <Route exact path="/contact" element={() => "Contact"}/>

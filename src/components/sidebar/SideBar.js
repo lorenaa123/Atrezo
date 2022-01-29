@@ -25,9 +25,9 @@ const SideBar = ({ isOpen, toggle }) => (
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink tag={Link} to={"/about"}>
+          <NavLink tag={Link} to={"/users"}>
             <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
-            About
+            Users
           </NavLink>
         </NavItem>
         <SubMenu title="Pages" icon={faCopy} items={submenus[0]} />
