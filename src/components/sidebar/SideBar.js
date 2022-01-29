@@ -44,7 +44,7 @@ const SideBar = ({ isOpen, toggle }) => (
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink tag={Link} to={"/contact"}>
+          <NavLink tag={Link} to={"/contact"} className="text-uppercase">
             <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
             Contact
           </NavLink>
